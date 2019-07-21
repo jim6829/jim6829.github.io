@@ -1,56 +1,12 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link rel="stylesheet" href="/assets/css/styles.css">
-		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
-		<!-- Begin Jekyll SEO tag v2.6.1 -->
-<meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/memo.html" />
-<meta property="og:url" content="http://localhost:4000/memo.html" />
-<script type="application/ld+json">
-{"@type":"WebPage","url":"http://localhost:4000/memo.html","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+---
+---
 
-	</head>
-	<body>
-		<nav>
-	
-		<a href="/" >
-			Home
-		</a>
-	
-		<a href="/about.html" >
-			About
-		</a>
-	
-		<a href="/blog.html" >
-			Blog
-		</a>
-	
-		<a href="/staff.html" >
-			Staff
-		</a>
-	
-		<a href="/memo.html" class="current">
-			Memo
-		</a>
-	
-</nav>
-		<h1>Todo List</h1>
+<h1>Todo List</h1>
 
 <ul>
-	
+	{% for todo in site.todos %}
 		<li>
-			<h2><a href="/todos/house.html">HOUSE</a></h2>
+			<h2><a href="{{ todo.url }}">{{ todo.title | upcase }}</a></h2>
 		</li>
-	
-		<li>
-			<h2><a href="/todos/school.html">SCHOOL</a></h2>
-		</li>
-	
+	{% endfor %}
 </ul>
-	</body>
-</html>
